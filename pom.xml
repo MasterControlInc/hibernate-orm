@@ -25,8 +25,6 @@
     <modules>
         <module>parent</module>
         <module>core</module>
-        <module>testing</module>
-        <module>testsuite</module>
         <module>cache-ehcache</module>
         <module>cache-jbosscache</module>
         <module>cache-oscache</module>
@@ -76,7 +74,7 @@
         </pluginManagement>
     </build>
 
-    <profiles>       
+    <profiles>
         <profile>
             <id>jdk6-modules</id>
             <activation>
@@ -89,7 +87,7 @@
                 <module>entitymanager</module>
                 <module>jdbc4-testing</module>
             </modules>
-        </profile>            
+        </profile>
         <profile>
             <id>docs</id>
             <activation>
@@ -99,7 +97,6 @@
                 </property>
             </activation>
             <modules>
-                <module>documentation</module>
                 <module>distribution</module>
             </modules>
         </profile>

@@ -112,12 +112,6 @@
     <build>
         <plugins>
             <plugin>
-                <!-- Needed in order to load the proper 'artifact handler' for the 'jdocbook-style' packaging -->
-                <groupId>org.jboss.maven.plugins</groupId>
-                <artifactId>maven-jdocbook-style-plugin</artifactId>
-                <extensions>true</extensions>
-            </plugin>
-            <plugin>
                 <groupId>org.codehaus.groovy.maven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
                 <version>1.0</version>
@@ -214,93 +208,6 @@
         </plugins>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.jboss.maven.plugins</groupId>
-                    <artifactId>maven-jdocbook-plugin</artifactId>
-                    <version>2.2.3</version>
-                    <extensions>true</extensions>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.hibernate</groupId>
-                            <artifactId>hibernate-jdocbook-style</artifactId>
-                            <version>2.0.1</version>
-                            <type>jdocbook-style</type>
-                        </dependency>
-                    </dependencies>
-                    <configuration>
-                        <formats>
-                            <format>
-                                <formatName>pdf</formatName>
-                                <stylesheetResource>classpath:/xslt/org/hibernate/jdocbook/xslt/pdf.xsl
-                                </stylesheetResource>
-                                <finalName>hibernate_reference.pdf</finalName>
-                            </format>
-                            <format>
-                                <formatName>html_single</formatName>
-                                <stylesheetResource>classpath:/xslt/org/hibernate/jdocbook/xslt/xhtml-single.xsl
-                                </stylesheetResource>
-                                <finalName>index.html</finalName>
-                            </format>
-                            <format>
-                                <formatName>html</formatName>
-                                <stylesheetResource>classpath:/xslt/org/hibernate/jdocbook/xslt/xhtml.xsl
-                                </stylesheetResource>
-                                <finalName>index.html</finalName>
-                            </format>
-                        </formats>
-                        <options>
-                            <xincludeSupported>true</xincludeSupported>
-                            <xmlTransformerType>saxon</xmlTransformerType>
-                            <!-- needed for uri-resolvers; can be ommitted if using 'current' uri scheme -->
-                            <!--     could also locate the docbook dependency and inspect its version... -->
-                            <docbookVersion>1.72.0</docbookVersion>
-                            <localeSeparator>-</localeSeparator>
-                        </options>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.jboss.maven.plugins</groupId>
-                    <artifactId>maven-jdocbook-style-plugin</artifactId>
-                    <version>2.0.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.5</version>
-                    <configuration>
-                        <links>
-                            <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
-                            <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
-                        </links>
-                        <packagesheader>Hibernate Packages</packagesheader>
-                        <doctitle>Hibernate Core ${project.version}</doctitle>
-                        <windowtitle>Hibernate Core ${project.version}</windowtitle>
-                        <bottom><![CDATA[Copyright &copy; ${inceptionYear}-{currentYear} <a href="http://redhat.com">Red Hat Middleware, LLC.</a>  All Rights Reserved]]></bottom>
-                        <excludePackageNames>orh.hibernate.tutorial*</excludePackageNames>
-                        <groups>
-                            <group>
-                                <title>Core API</title>
-                                <packages>
-                                    org.hibernate:org.hibernate.classic:org.hibernate.criterion:org.hibernate.mapping:org.hibernate.metadata:org.hibernate.cfg:org.hibernate.stat
-                                </packages>
-                            </group>
-                            <group>
-                                <title>Extension SPI/API</title>
-                                <packages>
-                                    org.hibernate.id*:org.hibernate.connection:org.hibernate.transaction:org.hibernate.type:org.hibernate.dialect*:org.hibernate.cache*:org.hibernate.event*:org.hibernate.property:org.hibernate.loader*:org.hibernate.persister*:org.hibernate.proxy:org.hibernate.tuple:org.hibernate.transform:org.hibernate.collection:org.hibernate.jdbc:org.hibernate.usertype
-                                </packages>
-                            </group>
-                            <group>
-                                <title>JBoss Cache Integration</title>
-                                <packages>org.hibernate.cache.jbc2*</packages>
-                            </group>
-                            <group>
-                                <title>Miscellaneous API</title>
-                                <packages>org.hibernate.tool.hbm2ddl:org.hibernate.jmx:org.hibernate.tool.instrument*</packages>
-                            </group>
-                        </groups>
-                    </configuration>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -469,13 +376,13 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
-            <version>99.0-does-not-exist</version>
+            <version>1.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging-api</artifactId>
-            <version>99.0-does-not-exist</version>
+            <version>1.1</version>
             <scope>test</scope>
         </dependency>
         <!-- / test-scoped dependencies for common testing dependencies -->
@@ -542,7 +449,7 @@
             <dependency>
                 <groupId>hsqldb</groupId>
                 <artifactId>hsqldb</artifactId>
-                <version>1.8.0.2</version>
+                <version>1.8.0.10</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
