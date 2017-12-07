@@ -824,47 +824,7 @@
             </properties>
         </profile>
 
-        <!-- The SQLServer2005 (MS JDBC) test envionment -->
-        <profile>
-            <id>mssql2005</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.microsoft.sqlserver</groupId>
-                    <artifactId>msjdbc</artifactId>
-                    <version>2.0.1008.2</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-            <properties>
-                <db.dialect>org.hibernate.dialect.SQLServerDialect</db.dialect>
-                <jdbc.driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc.driver>
-                <jdbc.url>jdbc:sqlserver://dev30.qa.atl.jboss.com:3918</jdbc.url>
-                <jdbc.user>hibbr35</jdbc.user>
-                <jdbc.pass>hibbr35</jdbc.pass>
-                <jdbc.isolation>4096</jdbc.isolation>
-            </properties>
-        </profile>
 
-        <!-- The SQLServer2005 (MS JDBC) test envionment -->
-        <profile>
-            <id>mssql2008</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.microsoft.sqlserver</groupId>
-                    <artifactId>msjdbc</artifactId>
-                    <version>2.0.1008.2</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-            <properties>
-                <db.dialect>org.hibernate.dialect.SQLServerDialect</db.dialect>
-                <jdbc.driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc.driver>
-                <jdbc.url>jdbc:sqlserver://vmg04.mw.lab.eng.bos.redhat.com:1433</jdbc.url>
-                <jdbc.user>hibbr35</jdbc.user>
-                <jdbc.pass>hibbr35</jdbc.pass>
-                <jdbc.isolation>4096</jdbc.isolation>
-            </properties>
-        </profile>
 
     </profiles>
 

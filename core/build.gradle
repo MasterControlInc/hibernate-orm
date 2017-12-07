@@ -1,0 +1,77 @@
+group 'org.luceehibernate'
+version '3.5.9'
+
+buildscript {
+    repositories {
+        maven {
+            credentials {
+                username "${artifactory_user}"
+                password "${artifactory_password}"
+            }
+            url "https://labs.mastercontrol.com/artifactory/jcenter"
+        }
+    }
+    dependencies {
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
+    }
+}
+
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+def theRepoKey = repositoryKey()
+artifactory {
+    contextUrl = "${artifactory_contextUrl}"
+    publish {
+        repository {
+            repoKey = theRepoKey
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+        }
+        defaults {
+            publications('mavenJava')
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'org.luceehibernate'
+            artifactId 'hibernate-core'
+            version publishVersion()
+
+            pom.withXml {
+                def xml = asString()
+                xml.delete(0, xml.length()).append(file("$buildDir/../pom.xml").text)
+            }
+
+            artifact(file("$buildDir/../target/hibernate-core-3.5.8-Final.jar"))
+        }
+    }
+}
+
+def publishVersion() {
+    "${version}-SNAPSHOT"
+
+}
+
+def repositoryKey() {
+
+    repo_key = "libs-snapshot-local"
+
+}
+
+
