@@ -12,7 +12,7 @@ This fork is a direct fork of the 3.5 branch of the hibernate-orm project with o
 - Clone this repository.
 - Make sure to have [maven](https://maven.apache.org/install.html) installed.
 - Import the whole repo into IntelliJ as a maven project. 
-- From the maven tool window inside the `core` subproject run the `assemble` task.
+- From the maven tool window inside the `core` subproject run the `package` task.
 - Your hibernate-core jar will be in the `core/target` folder
 
 *Note: The only subprojects we care about our the `core` and `parent` subprojects. Many of the others are broken.*
