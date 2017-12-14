@@ -25,4 +25,6 @@ This fork is a direct fork of the 3.5 branch of the hibernate-orm project with o
 - Put credentials to artifactory that have rights to deploy in the `gradle.properties` file in `core` and `parent`
 - Run `gradle artifactoryPublish` from the `core` and `parent` folders. Now you can pull in these dependencies like any other dependency.
 
+In order to publish a release build of the library make sure the repo-key is set to libs-release-local, otherwise for snapshots set that to libs-snapshot-local and make sure -SNAPSHOT is in the name of the built artifact.
+
 ##### Please direct any questions to the System Architecture team.
