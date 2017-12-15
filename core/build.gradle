@@ -1,5 +1,5 @@
 group 'org.luceehibernate'
-version '3.5.9'
+version '3.5.5.1'
 
 buildscript {
     repositories {
@@ -28,7 +28,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 def theRepoKey = repositoryKey()
@@ -58,19 +57,22 @@ publishing {
                 xml.delete(0, xml.length()).append(file("$buildDir/../pom.xml").text)
             }
 
-            artifact(file("$buildDir/../target/hibernate-core-3.5.8-Final.jar"))
+            artifact(file("$buildDir/../target/hibernate-core-${version}-Final.jar"))
+            //artifact(file("$buildDir/../target/hibernate-core-${version}-SNAPSHOT.jar"))
         }
     }
 }
 
 def publishVersion() {
-    "${version}-SNAPSHOT"
+    //"${version}-SNAPSHOT"
+    "${version}"
 
 }
 
 def repositoryKey() {
 
-    repo_key = "libs-snapshot-local"
+    //repo_key = "libs-snapshot-local"
+    repo_key = "libs-release-local"
 
 }
 

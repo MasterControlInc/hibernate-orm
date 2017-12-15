@@ -1,5 +1,5 @@
 group 'org.luceehibernate'
-version '3.5.9'
+version '3.5.5.1'
 
 buildscript {
     repositories {
@@ -64,12 +64,14 @@ publishing {
 }
 
 def publishVersion() {
-    "${version}-SNAPSHOT"
+    //"${version}-SNAPSHOT"
+    "${version}"
 
 }
 
 def repositoryKey() {
-    repo_key = "libs-snapshot-local"
+    //repo_key = "libs-snapshot-local"
+    repo_key = "libs-release-local"
 }
 
 
