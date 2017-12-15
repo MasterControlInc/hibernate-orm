@@ -21,17 +21,17 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate.util;
+package org.luceehibernate.util;
 
 import java.io.InputStream;
 import java.io.Serializable;
 
 import junit.framework.TestCase;
 
-import org.hibernate.bytecode.util.ByteCodeHelper;
+import org.luceehibernate.bytecode.util.ByteCodeHelper;
 
 /**
- * This is basically a test to assert the expectations of {@link org.hibernate.type.SerializableType}
+ * This is basically a test to assert the expectations of {@link org.luceehibernate.type.SerializableType}
  * in regards to deserializing bytes from second level caches.
  *
  * @author Steve Ebersole
@@ -52,7 +52,7 @@ public class SerializationHelperTest extends TestCase {
 	}
 
 	public void testSerializeDeserialize() throws Exception {
-		Class clazz = Thread.currentThread().getContextClassLoader().loadClass( "org.hibernate.util.SerializableThing" );
+		Class clazz = Thread.currentThread().getContextClassLoader().loadClass( "org.luceehibernate.util.SerializableThing" );
 		Object instance = clazz.newInstance();
 
 		// SerializableType.toBytes() logic, as called from SerializableType.disassemble()
@@ -74,7 +74,7 @@ public class SerializationHelperTest extends TestCase {
 		}
 
 		public Class loadClass(String name) throws ClassNotFoundException {
-			if ( ! name.equals( "org.hibernate.util.SerializableThing" ) ) {
+			if ( ! name.equals( "org.luceehibernate.util.SerializableThing" ) ) {
 				return getParent().loadClass( name );
 			}
 

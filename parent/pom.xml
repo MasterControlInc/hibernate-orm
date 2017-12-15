@@ -26,7 +26,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.hibernate</groupId>
+    <groupId>org.luceehibernate</groupId>
     <artifactId>hibernate-parent</artifactId>
     <packaging>pom</packaging>
     <version>3.5.5-Final</version>

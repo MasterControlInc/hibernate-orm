@@ -22,7 +22,7 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.dialect.resolver;
+package org.luceehibernate.dialect.resolver;
 
 import java.sql.SQLException;
 
@@ -30,10 +30,10 @@ import junit.framework.TestSuite;
 import junit.framework.Test;
 import junit.framework.TestCase;
 
-import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.TestingDialects;
-import org.hibernate.dialect.Mocks;
-import org.hibernate.exception.JDBCConnectionException;
+import org.luceehibernate.dialect.Dialect;
+import org.luceehibernate.dialect.TestingDialects;
+import org.luceehibernate.dialect.Mocks;
+import org.luceehibernate.exception.JDBCConnectionException;
 
 /**
  * TODO : javadoc

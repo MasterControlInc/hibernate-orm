@@ -22,19 +22,19 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.sql;
+package org.luceehibernate.sql;
 
 import java.util.Collections;
 
 import junit.framework.TestCase;
 
-import org.hibernate.persister.entity.PropertyMapping;
-import org.hibernate.type.Type;
-import org.hibernate.QueryException;
-import org.hibernate.sql.ordering.antlr.ColumnMapper;
-import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.HSQLDialect;
-import org.hibernate.dialect.function.SQLFunctionRegistry;
+import org.luceehibernate.persister.entity.PropertyMapping;
+import org.luceehibernate.type.Type;
+import org.luceehibernate.QueryException;
+import org.luceehibernate.sql.ordering.antlr.ColumnMapper;
+import org.luceehibernate.dialect.Dialect;
+import org.luceehibernate.dialect.HSQLDialect;
+import org.luceehibernate.dialect.function.SQLFunctionRegistry;
 
 /**
  * TODO : javadoc

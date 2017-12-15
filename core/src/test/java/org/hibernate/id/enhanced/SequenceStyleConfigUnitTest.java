@@ -21,7 +21,7 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate.id.enhanced;
+package org.luceehibernate.id.enhanced;
 
 import java.util.Properties;
 
@@ -30,13 +30,13 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import org.hibernate.Hibernate;
-import org.hibernate.MappingException;
-import org.hibernate.cfg.Environment;
-import org.hibernate.cfg.NamingStrategy;
-import org.hibernate.cfg.ObjectNameNormalizer;
-import org.hibernate.dialect.Dialect;
-import org.hibernate.id.PersistentIdentifierGenerator;
+import org.luceehibernate.Hibernate;
+import org.luceehibernate.MappingException;
+import org.luceehibernate.cfg.Environment;
+import org.luceehibernate.cfg.NamingStrategy;
+import org.luceehibernate.cfg.ObjectNameNormalizer;
+import org.luceehibernate.dialect.Dialect;
+import org.luceehibernate.id.PersistentIdentifierGenerator;
 
 /**
  * Tests that SequenceStyleGenerator configures itself as expected

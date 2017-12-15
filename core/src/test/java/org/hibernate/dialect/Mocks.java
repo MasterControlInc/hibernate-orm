@@ -22,7 +22,7 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.dialect;
+package org.luceehibernate.dialect;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

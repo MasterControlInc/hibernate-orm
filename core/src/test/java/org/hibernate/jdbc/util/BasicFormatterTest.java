@@ -13,7 +13,7 @@
  *
  * Red Hat Author(s): Steve Ebersole
  */
-package org.hibernate.jdbc.util;
+package org.luceehibernate.jdbc.util;
 
 import java.util.StringTokenizer;
 

@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.hibernate</groupId>
+        <groupId>org.luceehibernate</groupId>
         <artifactId>hibernate-parent</artifactId>
         <version>3.5.5-Final</version>
         <relativePath>parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>org.hibernate</groupId>
+    <groupId>org.luceehibernate</groupId>
     <artifactId>hibernate</artifactId>
     <packaging>pom</packaging>
 
@@ -25,17 +25,17 @@
     <modules>
         <module>parent</module>
         <module>core</module>
-        <module>cache-ehcache</module>
-        <module>cache-jbosscache</module>
-        <module>cache-oscache</module>
-        <module>cache-swarmcache</module>
-        <module>connection-c3p0</module>
-        <module>connection-proxool</module>
-        <module>annotations</module>
-        <module>envers</module>
-        <module>jmx</module>
-        <module>jdbc3-testing</module>
-        <module>cache-infinispan</module>
+        <!--<module>cache-ehcache</module>-->
+        <!--<module>cache-jbosscache</module>-->
+        <!--<module>cache-oscache</module>-->
+        <!--<module>cache-swarmcache</module>-->
+        <!--<module>connection-c3p0</module>-->
+        <!--<module>connection-proxool</module>-->
+        <!--<module>annotations</module>-->
+        <!--<module>envers</module>-->
+        <!--<module>jmx</module>-->
+        <!--<module>jdbc3-testing</module>-->
+        <!--<module>cache-infinispan</module>-->
 <!--
         <module>tutorials</module>
 -->

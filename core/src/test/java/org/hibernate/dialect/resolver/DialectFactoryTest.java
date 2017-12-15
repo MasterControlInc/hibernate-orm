@@ -22,7 +22,7 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.dialect.resolver;
+package org.luceehibernate.dialect.resolver;
 
 import java.util.Properties;
 import java.sql.Connection;
@@ -31,24 +31,24 @@ import junit.framework.TestSuite;
 import junit.framework.TestCase;
 import junit.framework.Test;
 
-import org.hibernate.HibernateException;
-import org.hibernate.dialect.HSQLDialect;
-import org.hibernate.dialect.H2Dialect;
-import org.hibernate.dialect.MySQLDialect;
-import org.hibernate.dialect.PostgreSQLDialect;
-import org.hibernate.dialect.DerbyDialect;
-import org.hibernate.dialect.IngresDialect;
-import org.hibernate.dialect.SQLServerDialect;
-import org.hibernate.dialect.InformixDialect;
-import org.hibernate.dialect.DB2Dialect;
-import org.hibernate.dialect.Oracle8iDialect;
-import org.hibernate.dialect.Oracle9iDialect;
-import org.hibernate.dialect.Oracle10gDialect;
-import org.hibernate.dialect.TestingDialects;
-import org.hibernate.dialect.Mocks;
-import org.hibernate.dialect.SybaseASE15Dialect;
-import org.hibernate.dialect.SybaseAnywhereDialect;
-import org.hibernate.cfg.Environment;
+import org.luceehibernate.HibernateException;
+import org.luceehibernate.dialect.HSQLDialect;
+import org.luceehibernate.dialect.H2Dialect;
+import org.luceehibernate.dialect.MySQLDialect;
+import org.luceehibernate.dialect.PostgreSQLDialect;
+import org.luceehibernate.dialect.DerbyDialect;
+import org.luceehibernate.dialect.IngresDialect;
+import org.luceehibernate.dialect.SQLServerDialect;
+import org.luceehibernate.dialect.InformixDialect;
+import org.luceehibernate.dialect.DB2Dialect;
+import org.luceehibernate.dialect.Oracle8iDialect;
+import org.luceehibernate.dialect.Oracle9iDialect;
+import org.luceehibernate.dialect.Oracle10gDialect;
+import org.luceehibernate.dialect.TestingDialects;
+import org.luceehibernate.dialect.Mocks;
+import org.luceehibernate.dialect.SybaseASE15Dialect;
+import org.luceehibernate.dialect.SybaseAnywhereDialect;
+import org.luceehibernate.cfg.Environment;
 
 /**
  * TODO : javadoc
@@ -67,11 +67,11 @@ public class DialectFactoryTest extends TestCase {
 	public void testBuildDialectByClass() {
 		assertEquals(
 				HSQLDialect.class,
-				DialectFactory.constructDialect( "org.hibernate.dialect.HSQLDialect" ).getClass()
+				DialectFactory.constructDialect( "org.luceehibernate.dialect.HSQLDialect" ).getClass()
 		);
 
 		try {
-			DialectFactory.constructDialect( "org.hibernate.dialect.NoSuchDialect" );
+			DialectFactory.constructDialect( "org.luceehibernate.dialect.NoSuchDialect" );
 			fail();
 		}
 		catch ( HibernateException e ) {
@@ -98,7 +98,7 @@ public class DialectFactoryTest extends TestCase {
 			assertNull( e.getCause() );
 		}
 
-		props.setProperty( Environment.DIALECT, "org.hibernate.dialect.HSQLDialect" );
+		props.setProperty( Environment.DIALECT, "org.luceehibernate.dialect.HSQLDialect" );
 		assertTrue( DialectFactory.buildDialect( props, null ) instanceof HSQLDialect );
 	}
 
@@ -136,7 +136,7 @@ public class DialectFactoryTest extends TestCase {
 		DialectFactory.registerDialectResolver( TestingDialects.ErrorDialectResolver1.class.getName() );
 		DialectFactory.registerDialectResolver( TestingDialects.ErrorDialectResolver2.class.getName() );
 		DialectFactory.registerDialectResolver( TestingDialects.MyOverridingDialectResolver1.class.getName() );
-		DialectFactory.registerDialectResolver( "org.hibernate.dialect.NoSuchDialectResolver" );
+		DialectFactory.registerDialectResolver( "org.luceehibernate.dialect.NoSuchDialectResolver" );
 		DialectFactory.registerDialectResolver( "java.lang.Object" );
 
 

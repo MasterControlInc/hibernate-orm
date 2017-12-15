@@ -24,7 +24,7 @@ header
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.sql.ordering.antlr;
+package org.luceehibernate.sql.ordering.antlr;
 }
 /**
  * Antlr grammar for rendering <tt>ORDER_BY</tt> trees as described by the {@link OrderByFragmentParser}

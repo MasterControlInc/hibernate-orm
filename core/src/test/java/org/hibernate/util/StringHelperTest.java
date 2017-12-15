@@ -19,7 +19,7 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate.util;
+package org.luceehibernate.util;
 
 import junit.framework.TestCase;
 
@@ -29,14 +29,14 @@ import junit.framework.TestCase;
  * @author Steve Ebersole
  */
 public class StringHelperTest extends TestCase {
-	private static final String BASE_PACKAGE = "org.hibernate";
-	private static final String STRING_HELPER_FQN = "org.hibernate.util.StringHelper";
+	private static final String BASE_PACKAGE = "org.luceehibernate";
+	private static final String STRING_HELPER_FQN = "org.luceehibernate.util.StringHelper";
 	private static final String STRING_HELPER_NAME = StringHelper.unqualify( STRING_HELPER_FQN );
 
 	public void testNameCollapsing() {
 		assertNull( StringHelper.collapse( null ) );
 		assertEquals( STRING_HELPER_NAME, StringHelper.collapse( STRING_HELPER_NAME ) );
-		assertEquals( "o.h.u.StringHelper", StringHelper.collapse( STRING_HELPER_FQN ) );
+		assertEquals( "o.l.u.StringHelper", StringHelper.collapse( STRING_HELPER_FQN ) );
 	}
 
 	public void testPartialNameUnqualification() {
@@ -48,6 +48,6 @@ public class StringHelperTest extends TestCase {
 	public void testBasePackageCollapsing() {
 		assertNull( StringHelper.collapseQualifierBase( null, BASE_PACKAGE ) );
 		assertEquals( STRING_HELPER_NAME, StringHelper.collapseQualifierBase( STRING_HELPER_NAME, BASE_PACKAGE ) );
-		assertEquals( "o.h.util.StringHelper", StringHelper.collapseQualifierBase( STRING_HELPER_FQN, BASE_PACKAGE ) );
+		assertEquals( "o.l.util.StringHelper", StringHelper.collapseQualifierBase( STRING_HELPER_FQN, BASE_PACKAGE ) );
 	}
 }

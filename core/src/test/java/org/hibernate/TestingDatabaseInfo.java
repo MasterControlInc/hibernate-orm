@@ -21,12 +21,12 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate;
+package org.luceehibernate;
 
-import org.hibernate.cfg.Configuration;
-import org.hibernate.cfg.Environment;
-import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.HSQLDialect;
+import org.luceehibernate.cfg.Configuration;
+import org.luceehibernate.cfg.Environment;
+import org.luceehibernate.dialect.Dialect;
+import org.luceehibernate.dialect.HSQLDialect;
 
 /**
  * TODO : javadoc

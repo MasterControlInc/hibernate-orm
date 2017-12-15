@@ -24,7 +24,7 @@ header
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.sql.ordering.antlr;
+package org.luceehibernate.sql.ordering.antlr;
 }
 /**
  * Antlr grammar for dealing with <tt>order-by</tt> mapping fragments.
@@ -88,7 +88,7 @@ tokens
      *
      * @return The processed node.
      *
-     * @see org.hibernate.dialect.Dialect#quote
+     * @see org.luceehibernate.dialect.Dialect#quote
      */
     protected AST quotedIdentifier(AST ident) {
         return ident;
@@ -113,7 +113,7 @@ tokens
      *
      * @return True if the node's text is a known function name, false otherwise.
      *
-     * @see org.hibernate.dialect.function.SQLFunctionRegistry
+     * @see org.luceehibernate.dialect.function.SQLFunctionRegistry
      */
     protected boolean isFunctionName(AST ast) {
         return false;

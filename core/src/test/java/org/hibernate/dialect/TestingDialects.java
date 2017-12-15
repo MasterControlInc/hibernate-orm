@@ -22,14 +22,14 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.dialect;
+package org.luceehibernate.dialect;
 
 import java.sql.SQLException;
 import java.sql.DatabaseMetaData;
 
-import org.hibernate.dialect.resolver.AbstractDialectResolver;
-import org.hibernate.dialect.resolver.BasicDialectResolver;
-import org.hibernate.HibernateException;
+import org.luceehibernate.dialect.resolver.AbstractDialectResolver;
+import org.luceehibernate.dialect.resolver.BasicDialectResolver;
+import org.luceehibernate.HibernateException;
 
 /**
  * TODO : javadoc

@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.hibernate</groupId>
+        <groupId>org.luceehibernate</groupId>
         <artifactId>hibernate-parent</artifactId>
         <version>3.5.5-Final</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>org.hibernate</groupId>
+    <groupId>org.luceehibernate</groupId>
     <artifactId>hibernate-core</artifactId>
     <packaging>jar</packaging>
 
@@ -105,7 +105,7 @@
                             <expression>${pom.version}</expression>
                             <targetMembers>
                             	<methodBodyReturn>
-                            	    <className>org.hibernate.Version</className>
+                            	    <className>org.luceehibernate.Version</className>
                             	    <methodName>getVersionString</methodName>
                             	</methodBodyReturn>
                             </targetMembers>
@@ -118,7 +118,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.hibernate.Version</mainClass>
+                            <mainClass>org.luceehibernate.Version</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -148,19 +148,19 @@
                     <groups>
                         <group>
                             <title>Core API</title>
-                            <packages>org.hibernate:org.hibernate.classic:org.hibernate.criterion:org.hibernate.metadata:org.hibernate.cfg:org.hibernate.usertype</packages>
+                            <packages>org.luceehibernate:org.luceehibernate.classic:org.luceehibernate.criterion:org.luceehibernate.metadata:org.luceehibernate.cfg:org.luceehibernate.usertype</packages>
                         </group>
                         <group>
                             <title>Extension API</title>
-                            <packages>org.hibernate.id:org.hibernate.connection:org.hibernate.transaction:org.hibernate.type:org.hibernate.dialect*:org.hibernate.cache*:org.hibernate.event*:org.hibernate.action:org.hibernate.property:org.hibernate.loader*:org.hibernate.persister*:org.hibernate.proxy:org.hibernate.tuple:org.hibernate.transform:org.hibernate.collection:org.hibernate.jdbc</packages>
+                            <packages>org.luceehibernate.id:org.luceehibernate.connection:org.luceehibernate.transaction:org.luceehibernate.type:org.luceehibernate.dialect*:org.luceehibernate.cache*:org.luceehibernate.event*:org.luceehibernate.action:org.luceehibernate.property:org.luceehibernate.loader*:org.luceehibernate.persister*:org.luceehibernate.proxy:org.luceehibernate.tuple:org.luceehibernate.transform:org.luceehibernate.collection:org.luceehibernate.jdbc</packages>
                         </group>
                         <group>
                             <title>Miscellaneous API</title>
-                            <packages>org.hibernate.stat:org.hibernate.tool.hbm2ddl:org.hibernate.jmx:org.hibernate.mapping:org.hibernate.tool.instrument</packages>
+                            <packages>org.luceehibernate.stat:org.luceehibernate.tool.hbm2ddl:org.luceehibernate.jmx:org.luceehibernate.mapping:org.luceehibernate.tool.instrument</packages>
                         </group>
                         <group>
                             <title>Internal Implementation</title>
-			    <packages>org.hibernate.engine:org.hibernate.impl:org.hibernate.sql:org.hibernate.lob:org.hibernate.util:org.hibernate.exception:org.hibernate.hql:org.hibernate.hql.ast:org.hibernate.hql.antlr:org.hibernate.hql.classic:org.hibernate.intercept:org.hibernate.secure:org.hibernate.pretty</packages>
+			    <packages>org.luceehibernate.engine:org.luceehibernate.impl:org.luceehibernate.sql:org.luceehibernate.lob:org.luceehibernate.util:org.luceehibernate.exception:org.luceehibernate.hql:org.luceehibernate.hql.ast:org.luceehibernate.hql.antlr:org.luceehibernate.hql.classic:org.luceehibernate.intercept:org.luceehibernate.secure:org.luceehibernate.pretty</packages>
                         </group>
                     </groups>
                 </configuration>

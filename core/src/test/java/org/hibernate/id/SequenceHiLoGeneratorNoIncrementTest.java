@@ -21,7 +21,7 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate.id;
+package org.luceehibernate.id;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -31,19 +31,19 @@ import java.util.Properties;
 
 import junit.framework.TestCase;
 
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.cfg.Environment;
-import org.hibernate.cfg.NamingStrategy;
-import org.hibernate.cfg.ObjectNameNormalizer;
-import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.H2Dialect;
-import org.hibernate.engine.SessionFactoryImplementor;
-import org.hibernate.impl.SessionImpl;
-import org.hibernate.jdbc.Work;
-import org.hibernate.mapping.SimpleAuxiliaryDatabaseObject;
-import org.hibernate.TestingDatabaseInfo;
+import org.luceehibernate.Hibernate;
+import org.luceehibernate.Session;
+import org.luceehibernate.cfg.Configuration;
+import org.luceehibernate.cfg.Environment;
+import org.luceehibernate.cfg.NamingStrategy;
+import org.luceehibernate.cfg.ObjectNameNormalizer;
+import org.luceehibernate.dialect.Dialect;
+import org.luceehibernate.dialect.H2Dialect;
+import org.luceehibernate.engine.SessionFactoryImplementor;
+import org.luceehibernate.impl.SessionImpl;
+import org.luceehibernate.jdbc.Work;
+import org.luceehibernate.mapping.SimpleAuxiliaryDatabaseObject;
+import org.luceehibernate.TestingDatabaseInfo;
 
 /**
  * I went back to 3.3 source and grabbed the code/logic as it existed back then and crafted this

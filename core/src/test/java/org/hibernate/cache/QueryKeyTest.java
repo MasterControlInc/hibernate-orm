@@ -22,7 +22,7 @@
  * Boston, MA  02110-1301  USA
  *
  */
-package org.hibernate.cache;
+package org.luceehibernate.cache;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -30,16 +30,16 @@ import java.util.HashMap;
 
 import junit.framework.TestCase;
 
-import org.hibernate.EntityMode;
-import org.hibernate.transform.AliasToBeanResultTransformer;
-import org.hibernate.transform.RootEntityResultTransformer;
-import org.hibernate.transform.ResultTransformer;
-import org.hibernate.transform.DistinctRootEntityResultTransformer;
-import org.hibernate.transform.AliasToEntityMapResultTransformer;
-import org.hibernate.transform.PassThroughResultTransformer;
-import org.hibernate.transform.DistinctResultTransformer;
-import org.hibernate.util.SerializationHelper;
-import org.hibernate.util.ArrayHelper;
+import org.luceehibernate.EntityMode;
+import org.luceehibernate.transform.AliasToBeanResultTransformer;
+import org.luceehibernate.transform.RootEntityResultTransformer;
+import org.luceehibernate.transform.ResultTransformer;
+import org.luceehibernate.transform.DistinctRootEntityResultTransformer;
+import org.luceehibernate.transform.AliasToEntityMapResultTransformer;
+import org.luceehibernate.transform.PassThroughResultTransformer;
+import org.luceehibernate.transform.DistinctResultTransformer;
+import org.luceehibernate.util.SerializationHelper;
+import org.luceehibernate.util.ArrayHelper;
 
 /**
  * Tests relating to {@link QueryKey} instances.

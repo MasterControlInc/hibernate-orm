@@ -21,15 +21,15 @@
  * 51 Franklin Street, Fifth Floor
  * Boston, MA  02110-1301  USA
  */
-package org.hibernate.id.enhanced;
+package org.luceehibernate.id.enhanced;
 
 import junit.framework.Assert;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import org.hibernate.id.IdentifierGeneratorHelper;
-import org.hibernate.id.IntegralDataTypeHolder;
+import org.luceehibernate.id.IdentifierGeneratorHelper;
+import org.luceehibernate.id.IntegralDataTypeHolder;
 
 /**
  * {@inheritDoc}

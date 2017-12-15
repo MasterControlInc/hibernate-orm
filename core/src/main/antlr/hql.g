@@ -2,10 +2,10 @@ header
 {
 //   $Id: hql.g 10163 2006-07-26 15:07:50Z steve.ebersole@jboss.com $
 
-package org.hibernate.hql.antlr;
+package org.luceehibernate.hql.antlr;
 
-import org.hibernate.hql.ast.*;
-import org.hibernate.hql.ast.util.*;
+import org.luceehibernate.hql.ast.*;
+import org.luceehibernate.hql.ast.util.*;
 
 }
 /**
