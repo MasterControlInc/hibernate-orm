@@ -7,7 +7,7 @@
         <groupId>org.luceehibernate</groupId>
         <artifactId>hibernate-parent</artifactId>
         <version>3.5.5.1-Final</version>
-        <!---<version>3.5.5.1-SNAPSHOT</version>--->
+        <!---<version>3.5.5.1-SNAPSHOT</version>-->
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
 
@@ -142,8 +142,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
-                    <!-- 
-                    for the time being, gonna ignore the custom stylesheet (what did it do anyway???) 
+                    <!--
+                    for the time being, gonna ignore the custom stylesheet (what did it do anyway???)
                     <stylesheetfile>xyz</stylesheetfile>
                     -->
                     <groups>

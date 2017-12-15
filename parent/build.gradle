@@ -65,7 +65,7 @@ publishing {
 
 def publishVersion() {
     //"${version}-SNAPSHOT"
-    "${version}"
+    "${version}-Final"
 
 }
 

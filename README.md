@@ -25,6 +25,6 @@ This fork is a direct fork of the 3.5 branch of the hibernate-orm project with o
 - Put credentials to artifactory that have rights to deploy in the `gradle.properties` file in `core` and `parent`
 - Run `gradle artifactoryPublish` from the `core` and `parent` folders. Now you can pull in these dependencies like any other dependency.
 
-In order to publish a snapshot build of the library make sure the repo-key in core/build.gradle and parent/build.gradle are set to libs-snapshot-local, set version in publishVersion() from FINAL to SNAPSHOT in parent/pom.xml and core/pom.xml, and change the artifact() task in core/build.gradle to use the SNAPSHOT jar. We left commented SNAPSHOT examples in the files referenced.
+In order to publish a snapshot build of the library make sure the repo-key in core/build.gradle and parent/build.gradle are set to libs-snapshot-local, set version in publishVersion() from FINAL to SNAPSHOT in parent/pom.xml and core/pom.xml. We left commented SNAPSHOT examples in the files referenced.
 
 ##### Please direct any questions to the System Architecture team.
